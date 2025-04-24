@@ -3,7 +3,7 @@ data "aws_ami" "app_ami" {
 
   filter {
     name   = "name"
-    values = ["bitnami-elasticsearch-8.13.2-0-linux-debian-12-x86_64-hvm-ebs-nami"]
+    values = ["bitnami-tomcat-8.5.98-3-r05-linux-debian-11-x86_64-hvm-ebs-nami"]
   }
 
   filter {
