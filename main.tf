@@ -20,7 +20,7 @@ resource "aws_instance" "web" {
   subnet_id = "subnet-02979c360edee0ea5"
   root_block_device {
     volume_type = "gp2"
-    volume_size = 8
+    volume_size = 10
     encrypted   = true
     kms_key_id  = "alias/aws/ebs"
   }
