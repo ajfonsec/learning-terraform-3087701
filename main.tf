@@ -18,7 +18,12 @@ resource "aws_instance" "web" {
   ami           = data.aws_ami.app_ami.id
   instance_type = "t3.nano"
   subnet_id = "subnet-02979c360edee0ea5"
-
+  root_block_device {
+    volume_type = "gp2"
+    volume_size = 8
+    encrypted   = true
+    kms_key_id  = "alias/aws/ebs"
+  }
   tags = {
     Name = "HelloWorld"
   }
