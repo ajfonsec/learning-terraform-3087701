@@ -16,7 +16,7 @@ data "aws_ami" "app_ami" {
 
 resource "aws_instance" "web" {
   ami           = data.aws_ami.app_ami.id
-  instance_type = "t3.nano"
+  instance_type = var.instance_type
   subnet_id = "subnet-02979c360edee0ea5"
   root_block_device {
     volume_type = "gp2"
